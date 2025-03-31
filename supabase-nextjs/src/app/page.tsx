@@ -1,9 +1,10 @@
 import Image from "next/image";
+import ExampleDataFetch from "../components/ExampleDataFetch";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start w-full max-w-4xl">
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -12,6 +13,12 @@ export default function Home() {
           height={38}
           priority
         />
+
+        {/* Supabase Data Fetching Example */}
+        <div className="w-full bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-lg p-6 shadow-sm">
+          <ExampleDataFetch />
+        </div>
+
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
